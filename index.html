@@ -8,11 +8,11 @@
 <meta property="og:title" content="Sensual Control — пульт для управления вибратором">
 <meta property="og:description" content="Приложение-пульт: свои ритмы, плавная сила, таймеры, управление на расстоянии. 18+">
 <meta property="og:image" content="og-image.png">
-<link rel="icon" href="favicon.ico">
 <meta name="theme-color" content="#0c0410">
+<link rel="icon" href="favicon.ico">
 <style>
 :root{
---bg:#0c0410;--bg-2:#140820;--panel:#1a0c26;--panel-2:#22103033;
+--bg:#0c0410;--bg-2:#140820;--panel:#1a0c26;
 --line:rgba(199,140,255,.14);--line-str:rgba(199,140,255,.26);
 --accent:#c24bff;--accent-2:#ff4bd6;--glow:rgba(194,75,255,.45);
 --cream:#f2e9f7;--mute:#b299c9;
@@ -113,8 +113,13 @@ section{padding:84px 0}
 .rating-sum{display:inline-flex;align-items:center;gap:10px;margin-top:14px;color:var(--mute);font-size:14px}
 .rating-sum b{color:var(--cream);font-size:16px}
 
+/* DOWNLOAD */
+.dl-card{border:1px solid var(--line-str);border-radius:26px;background:linear-gradient(135deg,var(--panel),var(--bg-2));padding:42px 34px;text-align:center;max-width:720px;margin:0 auto}
+.dl-note{margin-top:16px;color:var(--mute);font-size:13px;max-width:560px;margin-left:auto;margin-right:auto}
+.dl-note a{color:var(--accent-2);text-decoration:underline}
+
 /* FAQ */
-.faq{max-width:760px}
+.faq{max-width:760px;margin:0 auto}
 .faq details{border-bottom:1px solid var(--line)}
 .faq summary{cursor:pointer;padding:22px 2px;font-weight:700;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:center}
 .faq summary::-webkit-details-marker{display:none}
@@ -125,9 +130,12 @@ section{padding:84px 0}
 .faq details[open] summary span.ic::after{transform:scaleY(0)}
 .faq p{color:var(--mute);font-size:15.5px;padding:0 2px 22px;max-width:650px}
 
-/* DOWNLOAD */
-.dl-note{margin-top:14px;color:var(--mute);font-size:13px;max-width:560px}
-.dl-note a{color:var(--accent-2);text-decoration:underline}
+/* LEGAL */
+.legal{max-width:760px;margin:0 auto;color:var(--mute);font-size:15.5px}
+.legal h3{color:var(--cream);font-size:20px;margin:26px 0 10px}
+.legal p{margin-bottom:12px}
+.legal ul{margin:0 0 14px 20px}
+.legal li{margin-bottom:6px}
 
 /* BAND */
 .band{position:relative;text-align:center;border:1px solid var(--line);border-radius:28px;background:linear-gradient(135deg,var(--panel),var(--bg));padding:64px 32px;overflow:hidden}
@@ -165,6 +173,7 @@ footer{border-top:1px solid var(--line);margin-top:24px;padding:36px 0}
 .duo .pp{width:52px;height:52px}
 section{padding:56px 0}
 .band{padding:44px 20px}
+.dl-card{padding:30px 20px}
 .btn{font-size:15px;padding:13px 24px}
 .quote .top{flex-wrap:wrap}
 }
@@ -174,7 +183,18 @@ section{padding:56px 0}
 
 <header>
   <div class="wrap nav">
-    <a href="#" class="logo-wrap"><img class="logo" src="assets/logo.svg" alt="Sensual Control"></a>
+    <a href="#" aria-label="Sensual Control">
+      <svg class="logo" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ff4bd6"/>
+            <stop offset="1" stop-color="#c24bff"/>
+          </linearGradient>
+        </defs>
+        <rect x="1.5" y="1.5" width="45" height="45" rx="14" stroke="url(#lg)" stroke-width="2.4"/>
+        <path d="M24 36s-9-5.6-9-12.4a5.2 5.2 0 0 1 9-3.5 5.2 5.2 0 0 1 9 3.5C33 30.4 24 36 24 36z" stroke="url(#lg)" stroke-width="2.4" stroke-linejoin="round"/>
+      </svg>
+    </a>
     <nav class="nav-right">
       <div class="nav-links">
         <a href="#features">Возможности</a>
@@ -196,7 +216,7 @@ section{padding:56px 0}
       <p class="lede">Управляйте вибратором прямо с телефона: свои ритмы, плавная сила, переключение в одно касание. И то же самое — на любом расстоянии.</p>
       <div class="hero-cta">
         <a class="btn btn-main" href="downloads/app-release.apk" download="SensualControl.apk">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v12"/><path d="m7 12 5 5 5-5"/><path d="M5 21h14"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 12 5 5 5-5"/><path d="M5 21h14"/></svg>
           Скачать приложение
         </a>
         <a class="btn btn-line" href="#features">Как это работает</a>
@@ -217,3 +237,191 @@ section{padding:56px 0}
     </div>
   </div>
 </section>
+
+<section id="features">
+  <div class="wrap">
+    <div class="head center">
+      <h2>Всё управление — в вашей руке</h2>
+      <p>Простое приложение, в котором разберёшься за минуту.</p>
+    </div>
+
+    <div class="feats">
+      <div class="feat">
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+        <h3>Плавная сила</h3>
+        <p>Прибавляйте и убавляйте интенсивность одним движением пальца — без резких скачков.</p>
+      </div>
+      <div class="feat">
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12h3l2-6 4 12 3-8 2 4h4"/></svg></div>
+        <h3>Свои ритмы</h3>
+        <p>Готовые паттерны пульсации или создайте собственный — и сохраните в избранное.</p>
+      </div>
+      <div class="feat">
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg></div>
+        <h3>Таймер и сценарии</h3>
+        <p>Задайте нарастание или смену режимов по времени — приложение сделает остальное само.</p>
+      </div>
+      <div class="feat">
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 18V6l10-2v12"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg></div>
+        <h3>Под музыку</h3>
+        <p>Синхронизация с ритмом музыки или звуков вокруг — вибрация следует за битом.</p>
+      </div>
+      <div class="feat">
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+        <h3>Приватно</h3>
+        <p>Соединение зашифровано, историю мы не храним. Иконка и название на экране — незаметные.</p>
+      </div>
+      <div class="feat">
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 7 10 3 7 1M3 7h4M17 17l-3 4 3 2M21 17h-4"/></svg></div>
+        <h3>Без настроек</h3>
+        <p>Подключение по Bluetooth в пару касаний. Никаких кодов и сложных конфигураций.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="duo">
+  <div class="wrap">
+    <div class="duo">
+      <div>
+        <h2>Близко — даже когда далеко</h2>
+        <p>Передайте управление партнёру, и он будет задавать ритм из любой точки мира. Для пар на расстоянии и для совместных вечеров онлайн.</p>
+        <p>Доступ включается и отзывается в одно касание — вы всегда решаете, кто держит пульт.</p>
+      </div>
+      <div class="dist" aria-hidden="true">
+        <div class="pp"></div>
+        <div class="thread"></div>
+        <div class="pp"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="head center">
+      <h2>Что пишут пользователи</h2>
+      <p>Отзывы тех, кто уже пользуется приложением.</p>
+      <div class="rating-sum"><span class="stars">★★★★★</span><b>4.9</b> из 5 — 412 оценок</div>
+    </div>
+
+    <div class="reviews">
+      <div class="quote">
+        <div class="top"><div class="stars" aria-label="Оценка 5 из 5">★★★★★</div><span class="date">12 ноября 2026</span></div>
+        <p>Разобралась за минуту, управление плавное и приятное. Теперь это наш вечерний ритуал.</p>
+        <div class="by"><div class="av">А</div><div><b>Алина К.</b><small>Москва · проверенный покупатель</small></div></div>
+      </div>
+
+      <div class="quote">
+        <div class="top"><div class="stars" aria-label="Оценка 5 из 5">★★★★★</div><span class="date">3 ноября 2026</span></div>
+        <p>Мы в разных городах, а управление на расстоянии работает без задержек. Очень сблизило.</p>
+        <div class="by"><div class="av">Д</div><div><b>Дмитрий С.</b><small>Казань · проверенный покупатель</small></div></div>
+      </div>
+
+      <div class="quote">
+        <div class="top"><div class="stars" aria-label="Оценка 4 из 5">★★★★☆</div><span class="date">28 октября 2026</span></div>
+        <p>Свои ритмы под музыку — любимая функция. Приложение аккуратное, ничего лишнего.</p>
+        <div class="by"><div class="av">М</div><div><b>Марина Л.</b><small>Санкт-Петербург · проверенный покупатель</small></div></div>
+      </div>
+
+      <div class="quote">
+        <div class="top"><div class="stars" aria-label="Оценка 5 из 5">★★★★★</div><span class="date">19 октября 2026</span></div>
+        <p>Подключился к устройству с первого раза, Bluetooth без танцев с бубном.</p>
+        <div class="by"><div class="av">И</div><div><b>Игорь В.</b><small>Екатеринбург · проверенный покупатель</small></div></div>
+      </div>
+
+      <div class="quote">
+        <div class="top"><div class="stars" aria-label="Оценка 5 из 5">★★★★★</div><span class="date">7 октября 2026</span></div>
+        <p>Таймер с нарастанием — вообще огонь. Партнёр в другом городе, а вечер всё равно вместе.</p>
+        <div class="by"><div class="av">Е</div><div><b>Елена Р.</b><small>Новосибирск · проверенный покупатель</small></div></div>
+      </div>
+
+      <div class="quote">
+        <div class="top"><div class="stars" aria-label="Оценка 5 из 5">★★★★★</div><span class="date">24 сентября 2026</span></div>
+        <p>Иконка незаметная, в списке приложений ничего лишнего. Для меня это важно.</p>
+        <div class="by"><div class="av">О</div><div><b>Ольга Т.</b><small>Краснодар · проверенный покупатель</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="download">
+  <div class="wrap">
+    <div class="head center">
+      <h2>Скачайте приложение</h2>
+      <p>Android 8.0 и выше · бесплатно · без регистрации</p>
+    </div>
+    <div class="dl-card">
+      <a class="btn btn-main" href="downloads/app-release.apk" download="SensualControl.apk">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 12 5 5 5-5"/><path d="M5 21h14"/></svg>
+        Скачать APK
+      </a>
+      <div class="dl-note">При установке Android спросит разрешить установку из неизвестных источников — это стандартная защита системы. Скачивая приложение, вы подтверждаете, что вам исполнилось 18 лет, и соглашаетесь с <a href="#privacy">политикой конфиденциальности</a> и <a href="#terms">условиями использования</a>.</div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="head center">
+      <h2>Вопросы и ответы</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Подойдёт ли моему устройству<span class="ic"></span></summary>
+        <p>Приложение работает со смартфонами на Android 8.0 и выше. Устройство подключается по Bluetooth — поддерживаются распространённые модели, работающие по протоколу BLE.</p>
+      </details>
+      <details>
+        <summary>Нужна ли регистрация<span class="ic"></span></summary>
+        <p>Нет. Скачиваете приложение, подключаете устройство — и можно управлять. Аккаунт, пароли и подтверждение телефона не требуются.</p>
+      </details>
+      <details>
+        <summary>Насколько это безопасно<span class="ic"></span></summary>
+        <p>Соединение между приложением и устройством зашифровано. Историю команд и сессий мы не сохраняем, а иконка и название приложения на экране телефона выглядят нейтрально.</p>
+      </details>
+      <details>
+        <summary>Как работает управление на расстоянии<span class="ic"></span></summary>
+        <p>Вы передаёте партнёру доступ одним касанием, после чего он задаёт режим из любой точки мира. Доступ в любой момент можно отозвать — точно так же одним касанием.</p>
+      </details>
+      <details>
+        <summary>Есть ли бесплатная версия<span class="ic"></span></summary>
+        <p>Базовое управление доступно бесплатно, без регистрации и подписки. Расширенные сценарии и таймеры открываются в расширенной версии приложения.</p>
+      </details>
+      <details>
+        <summary>Как установить приложение<span class="ic"></span></summary>
+        <p>Скачайте APK-файл и откройте его на телефоне. Android спросит разрешение на установку из неизвестных источников — это стандартная защита системы. Разрешите установку для вашего браузера или файлового менеджера и вернитесь на страницу.</p>
+      </details>
+      <details>
+        <summary>Кому запрещено пользоваться<span class="ic"></span></summary>
+        <p>Приложение предназначено только для совершеннолетних пользователей (18+). Управляйте только теми устройствами, которые вы приобрели, и соблюдайте правила безопасного использования из инструкции к устройству.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Один пульт — вы решаете, когда</h2>
+    <p>Установите приложение, подключите устройство — и управляйте так, как удобно вам.</p>
+    <a class="btn btn-main" href="downloads/app-release.apk" download="SensualControl.apk">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 12 5 5 5-5"/><path d="M5 21h14"/></svg>
+      Скачать приложение
+    </a>
+  </div>
+</section>
+
+<section id="privacy">
+  <div class="wrap">
+    <div class="head center">
+      <h2>Политика конфиденциальности</h2>
+      <p>Последнее обновление: 1 ноября 2026</p>
+    </div>
+    <div class="legal">
+      <h3>Какие данные мы собираем</h3>
+      <p>Приложение работает без аккаунта и без сбора персональных данных. Мы не запрашиваем имя, номер телефона, адрес электронной почты, контакты или геолокацию.</p>
+
+      <h3>Что хранится на устройстве</h3>
+      <p>Настройки, пользовательские сценарии и сохранённые ритмы хранятся только на вашем телефоне. Мы не получаем к ним доступа и не отправляем их на свои серверы.</p>
+
+      <h3>История сессий</h3>
+      <p>История команд и сессий управления не сохраняется на наших серверах. Данные передаются напрямую между устройством и смартфоном по зашифрованному соединению.</p>
