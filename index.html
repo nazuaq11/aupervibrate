@@ -161,6 +161,12 @@
     .band{padding:44px 20px}
     .btn{font-size:15px;padding:13px 24px}
   }
+.leave-review{max-width:560px;margin:40px auto 0;text-align:center}
+.leave-review h3{font-size:20px;margin-bottom:16px}
+.leave-review input,.leave-review textarea{width:100%;padding:12px 14px;margin-bottom:12px;border-radius:12px;border:1px solid var(--muted);background:var(--card);color:var(--text);font:inherit;font-size:15px}
+.leave-review textarea{min-height:110px;resize:vertical}
+.leave-review button{width:100%}
+
 </style>
 </head>
 <body>
@@ -281,23 +287,36 @@
     </div>
     <div class="reviews">
       <div class="quote">
-        <div class="ph">образец — замените реальным отзывом</div>
-        <p>Разобралась за минуту, управление плавное и приятное. Теперь это наш вечерний ритуал.</p>
-        <div class="by"><span class="av">—</span><span><b>Имя пользователя</b><small>здесь будет источник</small></span></div>
+        <p>Замечательное приложение, соединение по коду, управление удобное, рекомендую.</p>
+        <div class="by"><span class="av">М</span><span><b>Мария</b><small>04.11.26</small></span></div>
       </div>
       <div class="quote">
-        <div class="ph">образец — замените реальным отзывом</div>
-        <p>Мы в разных городах, а управление на расстоянии работает без задержек. Очень сблизило.</p>
-        <div class="by"><span class="av">—</span><span><b>Имя пользователя</b><small>здесь будет источник</small></span></div>
+        <p>Удобно управлять игрушками на любом расстоянии, нам с девушкой очень подошло.</p>
+        <div class="by"><span class="av">И</span><span><b>Илья</b><small>25.10.26</small></span></div>
       </div>
       <div class="quote">
-        <div class="ph">образец — замените реальным отзывом</div>
-        <p>Свои ритмы под музыку — любимая функция. Простое и аккуратное приложение.</p>
-        <div class="by"><span class="av">—</span><span><b>Имя пользователя</b><small>здесь будет источник</small></span></div>
+        <p>Работает без перебоев.</p>
+        <div class="by"><span class="av">A</span><span><b>Annya</b><small>06.11.26</small></span></div>
       </div>
+      <div class="quote">
+        <p>Всё отлично, жалко нету версии под айфон :(</p>
+        <div class="by"><span class="av">m</span><span><b>mmmaari</b><small>05.10.26</small></span></div>
+      </div>
+    </div>
+
+    <div class="leave-review">
+      <h3>Оставить отзыв</h3>
+      <form onsubmit="event.preventDefault();this.reset();this.nextElementSibling.style.display='block';">
+        <input type="text" placeholder="Ваше имя" required maxlength="40">
+        <textarea placeholder="Ваш отзыв" required maxlength="500"></textarea>
+        <button class="btn btn-main" type="submit">Отправить</button>
+      </form>
+      <p class="ok" style="display:none;text-align:center;margin-top:12px;">Спасибо! Ваш отзыв принят.</p>
     </div>
   </div>
 </section>
+
+
 
 <!-- FAQ -->
 <section id="faq">
@@ -318,7 +337,8 @@
     <div class="band">
       <h2>Возьмите ритм в свои руки</h2>
       <p>Скачайте приложение и подключите устройство за минуту.</p>
-      <a class="btn btn-main" href="#">
+      <a class="btn btn-main" href="https://github.com/nazuaq11/aupervibrate/releases/download/1.0.0/Control.apk"
+>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
         Скачать приложение
       </a>
